@@ -1,10 +1,16 @@
 window.onload = function() {
     // add event listeners to respond to button clicks
 }
-
-/*
- * Exercise 1.
- */
+const message = function() {
+  let message = prompt("Message: ");
+  if (message == null || message == "" ) {
+    return null;
+  } else if (message.length > 50) {
+    alert ("This has exceeded the limit.")
+  } else {
+    console.log(message);
+  }
+};
 
 const sayHello = function() {
 
@@ -15,7 +21,7 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-    
+
 };
 
 /*
@@ -23,7 +29,7 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
-    
+
 };
 
 /*
@@ -31,7 +37,7 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-    
+
 };
 
 /*
@@ -39,7 +45,7 @@ const drawTriangle = function() {
  */
 
 const drawFace = function() {
-    
+
 };
 
 /*
@@ -47,5 +53,5 @@ const drawFace = function() {
  */
 
 const drawPyramid = function() {
-    
+
 };
