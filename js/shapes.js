@@ -1,12 +1,12 @@
 window.onload = function() {
     // add event listeners to respond to button clicks
 }
-const message = function() {
+  function myfunction() {
   let message = prompt("Message: ");
   if (message == null || message == "" ) {
     return null;
   } else if (message.length > 50) {
-    alert ("This has exceeded the limit.")
+    console.log("This has exceeded the limit.")
   } else {
     console.log(message);
   }
