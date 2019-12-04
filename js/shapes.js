@@ -19,6 +19,7 @@ window.onload = function() {
     // equivalent set of six event listeners for your solutions. the first one is done for you.
 
     document.getElementById("hello").onclick = sayHello;
+    document.getElementById("rectangle").onclick = drawRectangle;
 }
 const sayHello = function() {
   let message = prompt("Message:");
@@ -26,8 +27,8 @@ const sayHello = function() {
     alert("Your message is too long. Please keep your message under 50 characters.");
     message = prompt("Message:")
   }
-    const canvas = document.getElementById('student-canvas-1');
-    const ctx = canvas.getContext('2d');
+    let canvas = document.getElementById('student-canvas-1');
+    let ctx = canvas.getContext('2d');
     ctx.font = '48px sans-serif';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.strokeText(message, 30, 70, 994);
@@ -39,7 +40,17 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-  
+  do {
+     var width = prompt("Width: ")
+     var height = prompt("Height: ")
+     var x = prompt("X: ")
+     var y = prompt("Y: ")
+   } while (width > 1024 || width < 1 || height > 1024 || height < 1)
+   const canvas = document.getElementById('student-canvas-2');
+   const ctx = canvas.getContext('2d');
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+   ctx.strokeRect(x, y, width, height);
+   
 };
 
 /*
