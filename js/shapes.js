@@ -39,7 +39,7 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-    // write your exercise 2 code here
+  
 };
 
 /*
