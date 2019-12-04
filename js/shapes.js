@@ -20,19 +20,22 @@ window.onload = function() {
 
     document.getElementById("hello").onclick = sayHello;
 }
-  function myfunction() {
-  let message = prompt("Message: ");
-  if (message == null || message == "" ) {
-    return null;
-  } else if (message.length > 50) {
-    console.log("This has exceeded the limit.")
-  } else {
-    console.log(message);
-  }
-};
-
 const sayHello = function() {
-    // write your exercise 1 code here
+    const canvas = document.getElementById('student-canvas-1');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    do {
+      var message = prompt("Message: ")
+      if (message.length > 50) {
+        alert("Your message is too long. Keep it under 50 characters")
+      }
+    } while(message.length > 50)
+
+    ctx.font = "48px sans-serif";
+    ctx.strokeText(message, 30, 70, 994);
+
+
 };
 
 /*
