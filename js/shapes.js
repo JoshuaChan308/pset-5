@@ -41,8 +41,8 @@ const sayHello = function() {
 
 const drawRectangle = function() {
   do {
-     var width = prompt("Width: ")
      var height = prompt("Height: ")
+     var width = prompt("Width: ")
      var x = prompt("X: ")
      var y = prompt("Y: ")
    } while (width > 1024 || width < 1 || height > 1024 || height < 1)
@@ -50,7 +50,7 @@ const drawRectangle = function() {
    const ctx = canvas.getContext('2d');
    ctx.clearRect(0, 0, canvas.width, canvas.height);
    ctx.strokeRect(x, y, width, height);
-   
+
 };
 
 /*
