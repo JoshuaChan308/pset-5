@@ -21,22 +21,18 @@ window.onload = function() {
     document.getElementById("hello").onclick = sayHello;
 }
 const sayHello = function() {
+  let message = prompt("Message:");
+  while (message.length >= 50){
+    alert("Your message is too long. Please keep your message under 50 characters.");
+    message = prompt("Message:")
+  }
     const canvas = document.getElementById('student-canvas-1');
     const ctx = canvas.getContext('2d');
+    ctx.font = '48px sans-serif';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    do {
-      var message = prompt("Message: ")
-      if (message.length > 50) {
-        alert("Your message is too long. Keep it under 50 characters")
-      }
-    } while(message.length > 50)
-
-    ctx.font = "48px sans-serif";
     ctx.strokeText(message, 30, 70, 994);
-
-
 };
+
 
 /*
  * Exercise 2.
