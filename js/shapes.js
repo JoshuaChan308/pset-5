@@ -46,9 +46,21 @@ const drawRectangle = function() {
  ctx.clearRect(0, 0, canvas.width, canvas.height);
  do {
    var width = prompt("Width: ")
+   if (width == null) {
+     break;
+   }
    var height = prompt("Height: ")
+   if (height == null) {
+     break;
+   }
    var x = prompt("X: ")
+   if (x == null) {
+     break;
+  }
    var y = prompt("Y: ")
+   if (y == null) {
+     break;
+  }
    if (width > canvas.width || width < 1) {
      alert("Your width must be between 1 and 1024.")
    }
@@ -64,9 +76,6 @@ const drawRectangle = function() {
    if (isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y)) {
      alert("One of your values is not a number.")
    }
-   if (x + width >= 1024 || y + height >= 512) {
-    alert("The rectangle won't fit on the canvas.");
-  }
  } while (width > canvas.width || width < 1 || height > canvas.height || height < 1 || x < 1 || x > 1024 || y < 1 || y > 512 || isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y))
 
  ctx.clearRect(0, 0, canvas.width, canvas.height);
