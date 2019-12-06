@@ -41,17 +41,33 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-  do {
-     var height = prompt("Height: ")
-     var width = prompt("Width: ")
-     var x = prompt("X: ")
-     var y = prompt("Y: ")
-   } while (width > 1024 || width < 1 || height > 1024 || height < 1)
-   const canvas = document.getElementById('student-canvas-2');
-   const ctx = canvas.getContext('2d');
-   ctx.clearRect(0, 0, canvas.width, canvas.height);
-   ctx.strokeRect(x, y, width, height);
+  const canvas = document.getElementById('student-canvas-2');
+  const ctx = canvas.getContext('2d');
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ do {
+   var width = prompt("Width: ")
+   var height = prompt("Height: ")
+   var x = prompt("X: ")
+   var y = prompt("Y: ")
+   if (width > canvas.width || width < 1) {
+     alert("Your width must be between 1 and 1024.")
+   }
+   if (height > canvas.height || height < 1) {
+     alert("Your height must be between 1 and 512.")
+   }
+   if (x < 1 || x > 1024) {
+     alert("Your x-coordinate must be between 1 and 1024.")
+   }
+   if (y < 1 || y > 512) {
+     alert("Your y-coordinate must be between 1 and 512.")
+   }
+   if (isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y)) {
+     alert("One of your values is not a number.")
+   }
+ } while (width > canvas.width || width < 1 || height > canvas.height || height < 1 || x < 1 || x > 1024 || y < 1 || y > 512 || isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y))
 
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ ctx.strokeRect(x, y, width, height);
 };
 
 /*
@@ -59,7 +75,26 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
-    // write your exercise 3 code here
+  const canvas = document.getElementById('student-canvas-3');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  do {
+    var color = (prompt("Color: "))
+    if (color == null) {
+      break;
+    }
+    color = String(color)
+    var color_case = color.toLowerCase()
+    if (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow") {
+      alert(color + " is not a supported color.")
+    }
+  } while (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow")
+
+  if (color != null) {
+    ctx.fillStyle = color_case;
+    ctx.fillRect(10, 10, 100, 50);
+  }
+
 };
 
 /*
