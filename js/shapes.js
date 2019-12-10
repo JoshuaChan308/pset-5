@@ -172,10 +172,10 @@ const drawTriangle = function() {
 
 const drawFace = function() {
   const canvas = document.getElementById('student-canvas-5');
-const ctx = canvas.getContext('2d');
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-do {
+  do {
   var radius = (prompt("Radius: "))
   if (radius == null) {
     break;
