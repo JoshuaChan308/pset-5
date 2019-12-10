@@ -46,7 +46,7 @@ const sayHello = function() {
 const drawRectangle = function() {
   const canvas = document.getElementById('student-canvas-2');
   const ctx = canvas.getContext('2d');
- ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
  do {
    var width = prompt("Width: ")
    if (width == null) {
