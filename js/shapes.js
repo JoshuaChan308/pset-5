@@ -116,8 +116,37 @@ const drawColoredRectangle = function() {
  * Exercise 4.
  */
 
-const drawTriangle = function() {
-    // write your exercise 4 code here
+const drawTriangle = function() {    
+      var firstSide = Number(prompt("Side 1: "))
+      var secondSide = Number(prompt("Side 2: "))
+      var thirdSide = Number(prompt("Side 3: "))
+      if (firstSide*firstSide + secondSide*secondSide != thirdSide*thirdSide) {
+        alert("That's not a valid right triangle.")
+      }
+      if (isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide)) {
+        alert("One of your sides is not a number.")
+      }
+      if (firstSide > 1024 || secondSide > 1024 || thirdSide > 1024) {
+        alert("Your triangle won't fit on the canvas.")
+      }
+    }  while (firstSide*firstSide + secondSide*secondSide != thirdSide*thirdSide || isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide || firstSide > 1024 || secondSide > 1024 || thirdSide > 1024))
+
+    var height = Math.min (firstSide, secondSide, thirdSide)
+    var hypotenuse = Math.max(firstSide, secondSide, thirdSide)
+    var base = Math.sqrt(hypotenuse*hypotenuse - height*height)
+
+    height = height + 25
+    base = base + 25
+    const canvas = document.getElementById('student-canvas-4');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(25, height);
+    ctx.lineTo(base, height)
+    ctx.lineTo(25, 25)
+    ctx.stroke();
+
 };
 
 /*
