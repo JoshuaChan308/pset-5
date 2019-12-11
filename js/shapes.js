@@ -126,18 +126,11 @@ const drawTriangle = function() {
 
   do {
     var side1 = prompt("Side 1: ")
-    if (side1 == null) {
-      break;
-    }
     var side2 = prompt("Side 2: ")
-    if (side2 == null) {
-      break;
-    }
     var side3 = prompt("Side 3: ")
-    if (side3 == null) {
+    if (side1 == null || side2 == null || side3 == null) {
       break;
     }
-
     var hypotenuse = Math.max(side1, side2, side3)
     var height = Math.min (side1, side2, side3)
     var base = Math.sqrt(hypotenuse*hypotenuse - height*height)
