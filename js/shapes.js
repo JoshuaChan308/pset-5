@@ -31,8 +31,8 @@ const sayHello = function() {
     alert("Your message is too long. Please keep your message under 50 characters.");
     message = prompt("Message:")
   }
-    let canvas = document.getElementById('student-canvas-1');
-    let ctx = canvas.getContext('2d');
+    let canvas = document.getElementById("student-canvas-1");
+    let ctx = canvas.getContext("2d");
     ctx.font = '48px sans-serif';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.strokeText(message, 30, 70, 994);
@@ -44,8 +44,8 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-  const canvas = document.getElementById('student-canvas-2');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("student-canvas-2");
+  const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
  do {
    var width = prompt("Width: ")
@@ -90,8 +90,8 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
-  const canvas = document.getElementById('student-canvas-3');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("student-canvas-3");
+  const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   do {
     var color = (prompt("Color: "))
@@ -117,8 +117,8 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-  const canvas = document.getElementById('student-canvas-4');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("student-canvas-4");
+  const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   do {
@@ -171,8 +171,8 @@ const drawTriangle = function() {
  */
 
 const drawFace = function() {
-  const canvas = document.getElementById('student-canvas-5');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("student-canvas-5");
+  const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   do {
