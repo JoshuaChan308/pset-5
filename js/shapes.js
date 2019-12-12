@@ -135,15 +135,15 @@ const drawTriangle = function() {
     var side1 = prompt("Side 1: ")
     var side2 = prompt("Side 2: ")
     var side3 = prompt("Side 3: ")
-
-    if (base == 0 && height == 0 && hypotenuse == 0) {
-        break;
-      }
       
     var hypotenuse = Math.max(side1, side2, side3)
     var height = Math.min (side1, side2, side3)
     var base = Math.sqrt(hypotenuse*hypotenuse - height*height)
 
+    if (base == 0 && height == 0 && hypotenuse == 0) {
+       break;
+     }
+      
     side1 = Number(side1)
     side2 = Number(side2)
     side3 = Number(side3)
