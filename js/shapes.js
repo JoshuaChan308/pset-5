@@ -26,16 +26,22 @@ window.onload = function() {
     document.getElementById("pyramid").onclick = drawPyramid;
 }
 const sayHello = function() {
-  let message = prompt("Message:");
-  while (message.length >= 50){
-    alert("Your message is too long. Please keep your message under 50 characters.");
-    message = prompt("Message:")
-  }
-    let canvas = document.getElementById("student-canvas-1");
-    let ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("student-canvas-1");
+  const ctx = canvas.getContext("2d");
+  do {
+    var message = prompt("Message: ")
+    if (message == null) {
+      break;
+    }
+    if (message.length > 50) {
+      alert("Your message is too long. Keep it under 50 characters")
+    }
+  } while(message.length > 50)
+
+  if (message != null) {
     ctx.font = "48px sans-serif";
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.strokeText(message, 30, 70, 994);
+    }
 };
 
 
